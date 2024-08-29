@@ -14,7 +14,7 @@
 
     <section class="contato">
         <h2>Entre em Contato</h2>
-        <form action="#" method="post">
+        <form id="form-contato">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -31,5 +31,14 @@
     <footer>
         <p>Rudinei Rozentalski</p>
     </footer>
+
+    <!-- Script para evitar o erro ao enviar o formulário -->
+    <script>
+        document.getElementById('form-contato').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Formulário enviado com sucesso!');
+            // Aqui você pode adicionar mais lógica, como enviar os dados para um servidor via AJAX.
+        });
+    </script>
 </body>
 </html>
